@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SmokeMe.TestAdapter" Version="1.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.31.Api\Sample.31.Api.csproj" />
+    <ProjectReference Include="..\Sample.ExternalSmokeTests\Sample.ExternalSmokeTests.csproj" />
+  </ItemGroup>
+
+</Project>
