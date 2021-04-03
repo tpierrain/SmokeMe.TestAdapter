@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Thomas PIERRAIN (use case driven)</Authors>
+    <Company>42 skillz</Company>
+    <Copyright>Copyright © Thomas PIERRAIN 2021</Copyright>
+    <Description>Test runner and adapter to transform your SmokeMe! smoke tests into integration tests.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/42skillz/SmokeMe.TestAdapter</PackageProjectUrl>
+    <PackageIcon>smoke-icon.jpg</PackageIcon>
+    <RepositoryUrl>https://github.com/42skillz/SmokeMe.TestAdapter</RepositoryUrl>
+    <PackageTags>IntegrationTests Integration runner testadapter adapter vstest test tests SmokeTests tests ContinuousDelivery Continuous Delivery Smoke Tests SmokeMe</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,6 +19,14 @@
   </ItemGroup>
 
   <ItemGroup Label="Package">
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\smoke-icon.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <None Include="build\smoke.me.runner.visualstudio.dotnetcore.props" PackagePath="build\smoke.me.runner.visualstudio.dotnetcore.props" Pack="true" />
   </ItemGroup>
 
