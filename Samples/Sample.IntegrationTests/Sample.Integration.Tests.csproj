@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SmokeMe.TestAdapter" Version="1.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0-release-20210330-02" />
+    <PackageReference Include="SmokeMe.TestAdapter" Version="1.1.4" />
   </ItemGroup>
 
   <ItemGroup>
