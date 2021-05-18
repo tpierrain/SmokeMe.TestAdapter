@@ -1,4 +1,4 @@
-﻿#define LAUNCHDEBUGGER
+﻿//#define LAUNCHDEBUGGER
 
 using System;
 using System.Collections.Generic;
@@ -30,7 +30,6 @@ namespace SmokeMe.TestAdapter
                 var sourceAssemblyPath = Path.IsPathRooted(sourceAssembly) ? sourceAssembly : Path.Combine(Directory.GetCurrentDirectory(), sourceAssembly);
                 logger.SendMessage(TestMessageLevel.Informational, $"Processing {sourceAssembly}");
 
-                var fullyQualifiedTestName = $"Sample.IntegrationTests.Whatever{counter}";
 
                 // VS expected FullyQualifiedName to be the actual class+type name,optionally with parameter types
                 // in parenthesis, but they must fit the pattern of a value returned by object.GetType().
@@ -49,7 +48,21 @@ namespace SmokeMe.TestAdapter
                 // Note that this also means you can no longer select a single tests of these to run.
                 // When you do that, all tests within the parent node will be executed
 
-                discoverySink.SendTestCase(new TestCase(fullyQualifiedTestName, new Uri(Constants.ExecutorUri), sourceAssemblyPath));
+                var fullyQualifiedTestName = $"Sample.ExternalSmokeTests.SmokeTestGoogleConnectivityLocatedInAnotherAssembly";
+                var discoveredTest = new TestCase(fullyQualifiedTestName, new Uri(Constants.ExecutorUri), sourceAssemblyPath)
+                {
+                    LineNumber = 42,
+                    Source = "samere"
+                };
+
+                discoverySink.SendTestCase(discoveredTest);
+
+
+                fullyQualifiedTestName = $"Sample.ExternalSmokeTests.BookingSmokeTest";
+                discoverySink.SendTestCase(discoveredTest);
+
+                fullyQualifiedTestName = $"Sample.ExternalSmokeTests.BookingSmokeTest";
+                discoverySink.SendTestCase(discoveredTest);
             }
         }
 

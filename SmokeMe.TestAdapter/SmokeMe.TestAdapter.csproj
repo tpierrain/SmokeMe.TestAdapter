@@ -11,7 +11,7 @@
     <PackageIcon>smoke-icon.jpg</PackageIcon>
     <RepositoryUrl>https://github.com/42skillz/SmokeMe.TestAdapter</RepositoryUrl>
     <PackageTags>IntegrationTests Integration runner testadapter adapter vstest test tests SmokeTests tests ContinuousDelivery Continuous Delivery Smoke Tests SmokeMe</PackageTags>
-    <Version>1.1.4</Version>
+    <Version>1.1.7</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
